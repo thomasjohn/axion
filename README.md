@@ -38,7 +38,7 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 ## New feaures
 
-...
+- Next/Prev options on client (with support of results with more than 100 repos)
 
 ## Learn More
 
