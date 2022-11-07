@@ -26,8 +26,11 @@ test("waiting for data", async () => {
   const getDataButton = screen.getByTestId("id-get-data");
   fireEvent.change(accountNameInput, { target: { value: "thomasjohn" } });
   fireEvent.click(getDataButton);
-  await waitFor(() => {
-    const table3 = screen.getByTestId("id-result-has-data");
-    expect(table3).toBeInTheDocument();
-  });
+  await waitFor(
+    () => {
+      const table3 = screen.getByTestId("id-result-has-data");
+      expect(table3).toBeInTheDocument();
+    },
+    { timeout: 2000 }
+  );
 });
